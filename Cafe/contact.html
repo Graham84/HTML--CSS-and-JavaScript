@@ -2,16 +2,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<link rel="stylesheet" type="text/css" href="css/interface.css"/>
 <head>
 <title>Contact</title>
+<link rel="stylesheet" type="text/css" href="css/interface.css"/>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 </head>
 <body>
+<div id="page">
 <!-- "../index.html" -->
 <a href="index.html" title="Click here to return to the home page">
-<img src="images/logo.gif" alt="Example cafe" width="194" height="80" />
+<img class="main_image" src="images/logo.gif" alt="Example cafe" width="194" height="80" />
 </a>
-<div>
+<div id="navigation">
 <a href="index.html">HOME</a>
 <a href="menu.html">MENU</a>
 <a href="recipes.html">RECIPES</a>
@@ -21,7 +24,55 @@ CONTACT
 </div>
 <h2>Contact</h2>
 <p><address>12 Sea View, Newquay, Cornwall, UK</address></p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40680.54208144166!2d-5.111992323567059!3d50.4125239152479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486b0c115ab95687%3A0xc49b1af1e0545263!2sNewquay%2C+UK!5e0!3m2!1sen!2sie!4v1470069180620" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 <p><a href="http://maps.google.com/maps?q=newquay">Find us on Google Maps</a></p>
 <p><a href="mailto:info@examplecafe.com">Mail Example Cafe</a></p>
+
+<fieldset>
+<legend>Your message:</legend>
+<table>
+<tr>
+<td> <label for="emailTo"> To </label> </td>
+<td> <input type="text" name="txtTo" readonly="readonly" id="emailTo"
+size="20" value="Example Cafe" /> </td>
+</tr>
+<tr>
+<td> <label for="emailFrom">Your email</label> </td>
+<td> <input type="text" name="txtFrom" id="emailFrom" size="20"
+tabindex="1" maxlength="250" /> </td>
+</tr>
+<tr>
+<td> <label for="emailBody"> Message </label> </td>
+<td> <textarea name="txtBody" id="emailBody" cols="50" rows="10"
+tabindex="2"> </textarea> </td>
+</tr>
+</table>
+</fieldset>
+
+<fieldset>
+<legend>How you found us:</legend>
+<table>
+<tr>
+<td> <label for="emailBody">How did you hear of us</label> </td>
+<td>
+<select name="selReferrer">
+<option value="google"> Google </option>
+<option value="ad">Local newspaper ad</option>
+<option value="friend"> Friend </option>
+<option value="other"> Other </option>
+</select>
+</td>
+</tr>
+<tr>
+<td> <label for="newsletterSignup"> Newsletter </label> </td>
+<td> <input type="checkbox" name="chkBody" id="newsletterSignup"
+checked="checked" /> Ensure this box is checked if you would like
+to receive email updates </td>
+</tr>
+</table>
+</fieldset>
+<input type="submit" value="Send message" />
+
+</div>
 </body>
 </html>

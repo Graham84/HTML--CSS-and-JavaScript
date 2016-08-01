@@ -1,0 +1,159 @@
+<!-- Form -->
+<form action="http://www.example.org/search.aspx" method="get">
+<h3>Search the site</h3>
+<input type="text" name="txtSearchItem" />
+<input type="submit" value="Search" />
+</form>
+<!-- Textboxes -->
+<form action="http://www.example.com/search.aspx" method="get"
+name="frmSearch">
+Search:
+<input type="text" name="txtSearch" value="Search for" size="20"
+maxlength="64" />
+<input type="submit" value="Submit" />
+</form>
+
+<form action="http://www.example.com/login.aspx" method="post">
+Username:
+<input type="text" name="txtUsername" value="" size="20" maxlength="20" />
+<br />
+Password:
+<input type="password" name="pwdPassword" value="" size="20"
+maxlength="20" />
+<input type="submit" value="Submit" />
+</form>
+
+<form action="http://www.example.org/feedback.aspx" method="post">
+Please tell us what you think of the site and then click submit: <br />
+<textarea name="txtFeedback" rows="20" cols="50">
+Enter your feedback here.
+</textarea>
+<br />
+<input type="submit" value="Submit" />
+</form>
+
+<!-- Buttons -->
+<input type="submit" name="btnVoteRed" value="Vote for reds" />
+<input type="submit" name="btnVoteBlue" value="Vote for blues" />
+<br /> <br />
+<input type="reset" value="Clear form" /> <br /> <br />
+<input type="button" value="calculate" onclick="calculate()" />
+<input type="image" src="submit.jpg" alt="Submit" name="btnImage" />
+<button type="submit"> Submit </button>
+<br /> <br />
+<button type="reset"><b>Clear this form,</b> I want to start again </button>
+<br /> <br />
+<button type="button"> <img src="submit.gif" alt="submit" /> </button>
+
+<!-- Checkboxes -->
+<form action="http://www.example.com/cv.aspx" method="get" name="frmCV">
+Which of the following skills do you possess? Select all that apply.
+<input type="checkbox" name="chkSkills" value="xhtml" />XHTML <br />
+<input type="checkbox" name="chkSkills" value="CSS" /> CSS <br />
+<input type="checkbox" name="chkSkills" value="JavaScript" /> JavaScript <br />
+<input type="checkbox" name="chkSkills" value="aspnet" /> ASP.Net <br />
+<input type="checkbox" name="chkSkills" value="php" /> PHP
+</form>
+
+<form action="http://www.example.org/accept.aspx" name="frmTandC"
+method="get">
+<input type="checkbox" name="chkAcceptTerms" checked="checked" />
+I accept the <a href="terms.htm">terms and conditions</a> . <br />
+<input type="submit" />
+</form>
+
+<!-- Radio Buttons -->
+<form action="http://www.example.com/flights.aspx" name="frmFlightBooking"
+method="get">
+Please select which class of travel you wish to fly: <br />
+<input type="radio" name="radClass" value="First" />First class <br />
+<input type="radio" name="radClass" value="Business" />Business class <br />
+<input type="radio" name="radClass" value="Economy" />Economy class <br />
+</form>
+
+<!-- Select Boxes -->
+<select name="selColor">
+<option selected="selected" value="">Select color</option>
+<option value="red"> Red </option>
+<option value="green"> Green </option>
+<option value="blue"> Blue </option>
+</select>
+
+<form action="http://www.example.org/days.aspx" name="frmDays" method="get">
+<select size="4" name="selDay">
+<option value="Mon"> Monday </option>
+<option value="Tue"> Tuesday </option>
+<option value="Wed"> Wednesday </option>
+<option value="Thu"> Thursday </option>
+<option value="Fri"> Friday </option>
+<option value="Sat"> Saturday </option>
+<option value="Sun"> Sunday </option>
+</select>
+<br /> <br /> <input type="submit" value="Submit" />
+</form>
+
+<form action="http://www.example.org/days.aspx" method="get" name="frmDays">
+Please select more than one day of the week (to select multiple days
+hold down the control key and click on your chosen days): <br />
+<select name="selDays" multiple="multiple">
+<option value="Mon"> Monday </option>
+<option value="Tue"> Tuesday </option>
+<option value="Wed"> Wednesday </option>
+<option value="Thu"> Thursday </option>
+<option value="Fri"> Friday </option>
+<option value="Sat"> Saturday </option>
+<option value="Sun"> Sunday </option>
+</select>
+<br /> <br /> <input type="submit" value="Submit">
+</form>
+
+<form action="http://www.example.org/info.aspx" method="get" name="frmInfo">
+Please select the product you are interested in: <br />
+<select name="selInformation">
+<optgroup label="Hardware">
+<option value="Desktop">Desktop computers</option>
+<option value="Laptop">Laptop computers</option>
+</optgroup>
+<optgroup label="Software">
+<option value="OfficeSoftware">Office software</option>
+<option value="Games"> Games </option>
+</optgroup>
+<optgroup label="Peripherals">
+<option value="Monitors"> Monitors </option>
+<option value="InputDevices">Input Devices</option>
+<option value="Storage"> Storage </option>
+</optgroup>
+</select>
+<br /><br /> <input type="submit" value="Submit" />
+</form>
+
+<form action="http://www.example.org/info.aspx" method="get" name="frmInfo">
+Please select the product you are interested in: <br />
+<select name="selInformation">
+<option disabled="disabled" value=""> - Hardware - </option>
+<option value="Desktop">Desktop computers</option>
+<option value="Laptop">Laptop computers</option>
+<option disabled="disabled" value=""> - Software - </option>
+<option value="OfficeSoftware">Office software</option>
+<option value="Games"> Games </option>
+<option disabled="disabled" value=""> - Peripherals - </option>
+<option value="Monitors"> Monitors </option>
+<option value="InputDevices">Input Devices</option>
+<option value="Storage"> Storage </option>
+</select>
+<br /> <br /> <input type="submit" value="Submit" />
+</form>
+
+<!-- File Select -->
+<form action="http://www.example.com/imageUpload.aspx" method="post"
+name="fromImageUpload" enctype="multipart/form-data">
+<input type="file" name="fileUpload" accept="image/*" />
+<br /> <br /> <input type="submit" value="Submit" />
+</form>
+
+<!-- Hidden Controls -->
+<form action="http://www.example.com/vote.aspx" method="get" name="fromVote">
+<input type="hidden" name="hidPageSentFrom" value="home page" />
+<input type="submit" value="Click if this is your favorite page of our
+site." />
+</form>
