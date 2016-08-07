@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:land="en">
+<head>
+<title>String Object</title>
+</head>
+<body onload="statusBarText()" >
+<script type="text/JavaScript">
+//string
+myString = new String('Learning about Built-in Objects is easy')
+myString = myString.substring(15, 31)
+myString = myString.toUpperCase()
+document.write(myString)
+
+//date
+var birthDate = new Date(8298400000)
+document.write(birthDate)
+
+var birthDate = new Date("April 16, 1975")
+document.write(birthDate
+
+var birthDate = new Date(1975, 4, 28)
+document.write(birthDate)
+
+var today = new Date()
+var newYear = new Date(2016,11,31)
+var daysRemaining = (newYear - today)
+document.write(daysRemaining)
+
+var today = new Date()
+var newYear = new Date(2016,11,31)
+var daysRemaining = (newYear - today)
+daysRemaining = daysRemaining/86400000
+document.write(daysRemaining)
+
+//math
+numberPI = Math.PI
+numberPI = Math.round(numberPI)
+document.write (numberPI)
+
+//array
+instruments = new Array("guitar", "drums", "piano")
+instruments = new Array(3)
+
+fruit = new Array("apple", "banana", "orange", "mango", "lemon")
+document.write(fruit.length)
+document.write('These are ' + fruit.toString())
+
+function statusBarText()
+{
+window.status = "Did you see me down here?"
+}
+
+
+</script>
+
+</body>
+</html>

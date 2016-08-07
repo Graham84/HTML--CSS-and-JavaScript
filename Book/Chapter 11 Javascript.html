@@ -1,0 +1,107 @@
+<html>
+<body>
+<p>
+<script type="text/javascript">
+document.write("My first JavaScript")
+document.write("Page last modified on " + document.lastModified);
+</script>
+</p>
+<p>
+<script src="external.js" type="text/JavaScript">
+</script>
+<noscript> This only shows if the browser has JavaScript turned off.
+</noscript>
+</p>
+
+<h1>User Registration</h1>
+<form name="frmLogin" action="login.aspx" method="post">
+Username <input type="text" name="txtUsername" size="12" /> <br />
+Password <input type="password" name="pwdPassword" size="12" /> <br />
+<input type="submit" value="Log In" />
+</form>
+<p> New user? <a href="register.aspx">Register here</a> |
+<a href="lostPassword.aspx">Retrieve password</a> . </p>
+
+<script type="text/JavaScript">
+//ifelse
+date = new Date();
+time = date.getHours();
+if (time <12) {
+document.write('Good Morning');
+}
+else {
+document.write('Good Afternoon');
+}
+</script>
+
+<p> Enter the name of your favorite type of animal that stars in a
+cartoon: </p>
+<form name="frmAnimal">
+<input type="text" name="txtAnimal" /> <br />
+<input type="button" value="Check animal" onclick="checkAnimal()" />
+</form>
+
+<script type="text/JavaScript">
+//switch
+function checkAnimal() {
+	switch (document.frmAnimal.txtAnimal.value){
+		case "rabbit":
+			alert("Watch out, it's Elmer Fudd!")
+			break;
+		case "coyote":
+			alert("No match for the road runner - meep meep!")
+			break;
+		case "mouse":
+			alert("Watch out Jerry, here comes Tom!")
+			break;
+			default : alert("Are you sure you picked an animal from a cartoon?");
+		}
+	}
+</script>
+
+<script type="text/JavaScript">
+//while
+i = 1
+while (i <11) {
+document.write(i + " x 3 = " + (i * 3) + " <br />" );
+i ++
+}
+</script>
+
+<script type="text/JavaScript">
+//dowhile
+i = 12
+do {
+document.write(i + " x 3 = " + (i * 3) + " <br />" );
+i ++
+}
+while (i <11)
+</script>
+
+<script type="text/JavaScript">
+//enhanced for
+for (i=0; i <11; i++) {
+document.write(i + " x 3 = " + (i * 3) + " <br />" );
+}
+</script>
+
+<script type="text/JavaScript">
+//infinite loop
+for (i=0; /* no condition here */ ; i++) {
+document.write(i + " x 3 = " + (i * 3) + " <br />" );
+if (i == 100) {
+break;
+}
+}
+</script>
+
+<script type="text/JavaScript">
+//string
+myString = new String('Here is some bold text')
+document.write(myString.bold())
+MyString = new String("How many characters are in this sentence?")
+alert(myString.length)
+</script>
+
+</body>
+</html>
