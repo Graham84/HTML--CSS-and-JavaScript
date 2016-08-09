@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN"
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<script type="text/JavaScript">
+function validate(form) {
+var returnValue = true;
+//var username = document.frmRegister.txtUserName.value;
+var username = form.txtUserName.value;
+var password1 = form.txtPassword.value;
+var password2 = form.txtPassword2.value;
+
+if(username.length < 6) {
+returnValue = false;
+alert("Your username must be at least\n6 characters long.\nPlease try again.");
+document.frmRegister.txtUserName.focus();
+}
+if (password1.length < 6) {
+returnValue = false;
+alert("Your password must be at least\n6 characters long.\nPlease try again.");
+document.frmRegister.txtPassword.value = "";
+document.frmRegister.txtPassword2.value = "";
+document.frmRegister.txtPassword.focus();
+}
+if (password1 != password2) {
+returnValue = false;
+alert("Your password entries did not match.\nPlease try again.");
+document.frmRegister.txtPassword.value = "";
+document.frmRegister.txtPassword2.value = "";
+document.frmRegister.txtPassword.focus();
+}
+//alert returnValue;
+return returnValue;
+}
+</script>
+
+<title>Chapter 12 javascript</title>
+</head>
+<body>
+
+<form name="frmRegister" method ="post" action="register.apsx"
+	onsubmit="return validate(this);">
+	<div>
+		<label for="txtUserName:">Username:</label>
+		<input type="text" name="txtUserName" id="txtUserName" size="12" />
+	</div>
+	<div>
+		<label for = "txtPassword">Password:</label>
+		<input type="password" name="txtPassword" id="txtPassword" size="12" />
+	</div>
+	<div>
+		<label for = "txtPassword2">Confirm Password:</label>
+		<input type ="password" name="txtPassword2" id="txtPassword2" size ="12" />
+	</div>
+	<div>
+		<input type ="submit" value="Log in" />
+	</div>
+</form>
+
+</body>
+</html>
